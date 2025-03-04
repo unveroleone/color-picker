@@ -28,6 +28,10 @@ clear.addEventListener("click", function() {
 
 generate.addEventListener("click", colorPicker); // When the generate button is clicked, the colorPicker function is called
 
+inputs.forEach(input => {
+    input.addEventListener("input", colorPicker); // When the input field is changed, the colorPicker function is called
+});
+
 // Function to copy the color to the clipboard
 copy.addEventListener("click", function() {
     const color = document.body.style.backgroundColor; //checks the background color of the body
